@@ -1,0 +1,30 @@
+footer{
+    background-color: #FCF3FC;
+    padding: 60px 0;
+}
+footer ul{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer ul li{
+    width: calc(100%/3);
+    line-height: 3;
+    color: #606060;
+    font-weight: bold;
+}
+@media screen and (max-width:768px) {
+    footer {
+        padding: 60px 30px;
+    }
+    footer ul li {
+        width: calc(100%/2);
+        font-size: 14px;
+    }
+    
+}
