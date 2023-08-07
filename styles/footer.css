@@ -25,6 +25,8 @@ footer ul li{
     footer ul li {
         width: calc(100%/2);
         font-size: 14px;
+        line-height: 1.5;
+        padding: 10px;
         
     }
     
