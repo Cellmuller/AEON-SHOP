@@ -46,3 +46,12 @@ $(document).ready(function () {
     }
   });
 });
+
+// TOPスクロール
+$(document).ready(function () {
+  $('span:contains("マップ検索")')
+    .css("cursor", "pointer")
+    .click(function () {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+    });
+});

@@ -461,6 +461,15 @@
     top: -100%;
     left: 0;
 }
+.results-area .contents .cards .card > div:first-child > div:first-child img{
+    display: inline-block;
+    width: 15%;
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    min-width: 13px;
+    min-height: 16.5px;
+}
 .results-area .contents .cards .card > div:first-child > div:nth-child(2){
     color: #A7217E;
     font-weight: bold;
@@ -502,7 +511,7 @@
     margin-left: auto;
     font-size: 18px;
     position: relative;
-    min-width: 200px;
+    min-width: 150px;
 }
 .card-btn-icon{
     position: absolute;

@@ -14,12 +14,18 @@ header .logo{
     display: block;
     width: 100%;
 }
+header > div{
+    flex: 50%;
+}
 header ul{
     list-style: none;
+    font-weight: bold;
+    flex: 50%;
+    text-align: center;
 }
 header ul li{
     display: inline-block;
-    padding: 4px 15px;
+    padding: 6px 15px;
     font-size: 14px;
     text-align: center;
 }
