@@ -3,7 +3,7 @@ footer{
     padding: 60px 0;
 }
 footer ul{
-    max-width: 900px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     list-style: none;
@@ -25,6 +25,7 @@ footer ul li{
     footer ul li {
         width: calc(100%/2);
         font-size: 14px;
+        
     }
     
 }
