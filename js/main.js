@@ -55,3 +55,10 @@ $(document).ready(function () {
       $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 });
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
