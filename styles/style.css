@@ -458,7 +458,7 @@
     display: inline-block;
     padding: 3px 5px;
     position: absolute;
-    top: -100%;
+    top: -60%;
     left: 0;
 }
 .results-area .contents .cards .card > div:first-child > div:first-child img{
@@ -540,6 +540,9 @@
 }
 .results-area .contents .cards .card > div > p span{
     color: #A7217E;
+}
+.access-on-button{
+    color: #707070 !important;
 }
 /* cta-area */
 .cta-area {
