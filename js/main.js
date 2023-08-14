@@ -62,3 +62,37 @@ function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+// プルダウン制御
+$(document).ready(function () {
+  $("#serch-btn").click(function (e) {
+    e.preventDefault();
+
+    const selectedPrefecture = $("select").val();
+
+    if (selectedPrefecture === "選択してください") {
+      $("select option:first").text("都道府県を選択してください");
+      return;
+    }
+
+    // 検索の実際の処理（API呼び出し等）をここに書く
+    // ...
+  });
+});
+
+// 文字制御
+$(document).ready(function () {
+  function checkWindowSize() {
+    if ($(window).width() <= 768) {
+      $(".results-area .contents .cards .card > div > p span").text(
+        "エリア検索"
+      );
+    } else {
+      $(".results-area .contents .cards .card > div > p span").text(
+        "マップ検索"
+      );
+    }
+  }
+  checkWindowSize();
+  $(window).resize(checkWindowSize);
+});
