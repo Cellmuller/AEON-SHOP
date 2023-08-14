@@ -90,3 +90,10 @@ $(document).ready(function () {
   checkWindowSize();
   $(window).resize(checkWindowSize);
 });
+
+// モーダル制御
+$(document).ready(function () {
+  $(".close-button").on("click", function () {
+    $(".no-store-modal , .location-info-modal, .modal-bg").fadeOut();
+  });
+});
