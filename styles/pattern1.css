@@ -997,15 +997,27 @@
     .no-store-modal .contents, .location-info-modal .contents {
         padding: 15px 10px;
     }
-    .no-store-modal .contents > div:first-child, .location-info-modal .contents > div:first-child {
+    .no-store-modal .title, .location-info-modal .title {
+        padding: 10px;
+    }
+    .no-store-modal .title > div, .location-info-modal .title > div {
+        margin-bottom: 10px;
         font-size: 20px;
+    }
+    .no-store-modal .title > p, .location-info-modal .title > p {
+        font-size: 15px;
+    }
+    .no-store-modal .contents > div:first-child, .location-info-modal .contents > div:first-child {
+        font-size: 18px;
         padding-bottom: 10px;
     }
     .no-store-modal .contents > .flex > div > p, .location-info-modal .contents > .flex > div > p {
         font-size: 16px;
+        margin-bottom: 15px;
+        height: auto;
     }
     .no-store-modal .contents > .flex > div > a, .location-info-modal .contents > .flex > div > a {
-        font-size: 18px;
+        font-size: 16px;
     }
     .no-store-modal .contents > .flex > div > a img, .location-info-modal .contents > .flex > div > a img {
         left: 15px;
