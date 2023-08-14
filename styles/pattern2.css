@@ -290,7 +290,7 @@
     z-index: 5;
     display: none;
 }
-.no-store-modal{
+.location-info-modal{
     display: block;
 }
 .close-button {
