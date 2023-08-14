@@ -63,20 +63,14 @@ function scrollToTop() {
   });
 }
 
-// プルダウン制御
 $(document).ready(function () {
-  $("#serch-btn").click(function (e) {
+  $("#serch-btn").on("click", function (e) {
     e.preventDefault();
-
-    const selectedPrefecture = $("select").val();
-
-    if (selectedPrefecture === "選択してください") {
-      $("select option:first").text("都道府県を選択してください");
-      return;
+    if ($("select").val() === "選択してください") {
+      $("#message").text("※都道府県を選択して下さい").show();
+    } else {
+      $("#message").hide();
     }
-
-    // 検索の実際の処理（API呼び出し等）をここに書く
-    // ...
   });
 });
 
