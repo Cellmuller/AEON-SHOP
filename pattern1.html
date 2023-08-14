@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>店舗一覧 - イオンのほけん相談【公式】｜保険の比較・無料相談</title>
     <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/pattern1.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -234,67 +234,88 @@
                     </dl>
                 </div>
             </div>
-        </section>
-        <section class="results-area">
-            <div class="contents">
-                <div class="num">
-                    <span>検索結果</span><span>2</span>店舗
+            <!-- 該当店舗なしのモーダル -->
+            <div class="no-store-modal">
+                <div class="close-button"></div>
+                <div class="title">
+                    <div>該当店舗がありません。</div>
+                    <p>
+                        位置情報がうまく取得できない場合は、マップ検索よりお探しいただけます。
+                    </p>
                 </div>
-                <div class="cards">
-                    <div class="card">
+                <div class="contents">
+                    <div>オンライン相談または電話相談もご利用いただけます</div>
+                    <div class="flex">
                         <div>
-                            <div><img src="./images/location-icon-g.png">3.8km</div>
-                            <div>イオンモール東久留米店<br>【※営業時間短縮のお知らせ】</div>
-                        </div>
-                        <div>
-                            <div>
-                                〒203-0023<br>
-                                東京都東久留米市南沢5-17-62 イオンモール東久留米2階
-                            </div>
-                            <div class="flex">
-                                <div>
-                                    <img src="./images/time-icon.png" class="card-time-icon">営業時間 10:00～21:00
-                                </div>
-                                <div>
-                                    <img src="./images/tel-icon-b.png" class="card-time-icon">電話番号 <a href="tel:0120399099">0120-399-099</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#calendar">
-                                <img src="./images/calendar-icon.png" class="card-btn-icon">予約する
+                            <p>
+                                パソコン・タブレット・スマホで<br>
+                                ご自宅などご希望の環境から保険相談が可能です。
+                            </p>
+                            <a href="#">
+                                <img src="./images/monitor-icon.png">オンライン相談の予約
                             </a>
-                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#access">
-                                <img src="./images/location-icon.png" class="card-btn-icon">地図を表示
+                        </div>
+                        <div>
+                            <p>
+                                お電話でより気軽に<br>
+                                生命保険に関するご相談が可能です。
+                            </p>
+                            <a href="#">
+                                <img src="./images/tel-icon-w.png">電話相談の予約
                             </a>
                         </div>
                     </div>
-                    <div class="card">
+                </div>
+            </div>
+            <!-- 位置情報未取得のモーダル -->
+            <div class="location-info-modal">
+                <div class="close-button"></div>
+                <div class="title">
+                    <div>位置情報を取得できませんでした。</div>
+                    <p>
+                        ※ご利用のブラウザの【位置情報へのアクセスをオン】にしてご利用ください。
+                    </p>
+                </div>
+                <div class="contents">
+                    <div>オンライン相談または電話相談もご利用いただけます</div>
+                    <div class="flex">
                         <div>
-                            <div><img src="./images/location-icon-g.png">3.8km</div>
-                            <div>イオンモール東久留米店<br>【※営業時間短縮のお知らせ】</div>
+                            <p>
+                                パソコン・タブレット・スマホで<br>
+                                ご自宅などご希望の環境から保険相談が可能です。
+                            </p>
+                            <a href="#">
+                                <img src="./images/monitor-icon.png">オンライン相談の予約
+                            </a>
                         </div>
                         <div>
-                            <div>
-                                〒203-0023<br>
-                                東京都東久留米市南沢5-17-62 イオンモール東久留米2階
-                            </div>
-                            <div class="flex">
-                                <div>
-                                    <img src="./images/time-icon.png" class="card-time-icon">営業時間 10:00～21:00
-                                </div>
-                                <div>
-                                    <img src="./images/tel-icon-b.png" class="card-time-icon">電話番号 <a href="tel:0120399099">0120-399-099</a>
-                                </div>
-                            </div>
+                            <p>
+                                お電話でより気軽に<br>
+                                生命保険に関するご相談が可能です。
+                            </p>
+                            <a href="#">
+                                <img src="./images/tel-icon-w.png">電話相談の予約
+                            </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-bg"></div>
+        </section>
+        <section class="results-area">
+            </div>
+            <!-- 該当店舗なし -->
+            <div class="contents">
+                <div class="num">
+                    <span>検索結果</span><span>0</span>店舗
+                </div>
+                <div class="cards">
+                    <div class="card no-item">
                         <div>
-                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#calendar">
-                                <img src="./images/calendar-icon.png" class="card-btn-icon">予約する
-                            </a>
-                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#access">
-                                <img src="./images/location-icon.png" class="card-btn-icon">地図を表示
-                            </a>
+                            <p>該当店舗がありません。</p>
+                            <p>
+                                位置情報がうまく取得できない場合は、上記の<span>マップ検索</span>よりお探しいただけます。
+                            </p>
                         </div>
                     </div>
                 </div>
