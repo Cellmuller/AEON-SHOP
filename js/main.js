@@ -31,17 +31,39 @@ document
   .getElementById("serch-location-sp-btn")
   .addEventListener("click", getLocation);
 
-// 地方選択モーダル
+//地方選択モーダル
 $(document).ready(function () {
+  // クリックでモーダルを開く
   $(".text-wrapper > div").on("click", function (e) {
-    e.stopPropagation(); // この行を追加
-    $(".location-selection-modal").fadeIn("slow");
+    e.stopPropagation(); // イベント伝播を停止して、documentのclickイベントが発生しないようにする
+    $(".location-selection-modal").fadeIn("slow"); // モーダルをゆっくりと表示
   });
+
+  // ドキュメント全体をクリックした場合、モーダルを閉じる
   $(document).on("click", function () {
-    $(".location-selection-modal").fadeOut("slow");
+    $(".location-selection-modal").fadeOut("slow"); // モーダルをゆっくりと非表示
   });
+
+  // モーダル内のリスト項目をクリックした場合の処理
   $(".map .location-selection-modal ul li").on("click", function () {
-    $(".results-area").fadeIn();
+    $(".results-area").fadeIn(); // results-areaを表示
+  });
+
+  // #serch-btnをクリックした場合の処理
+  $("#serch-btn").on("click", function (e) {
+    e.preventDefault(); // デフォルトのイベントをキャンセル（例えば、ページ遷移を防ぐ）
+
+    // プルダウンの選択値を取得
+    const selectedPrefecture = $(".pulldown-wrapper select").val();
+
+    // プルダウンで「選択してください」が選択されている場合は何もせず、
+    // 都道府県が選択されている場合のみresults-areaを表示
+    if (selectedPrefecture !== "選択してください") {
+      $(".results-area").fadeIn(); // results-areaを表示
+      $("#message").text(""); // エラーメッセージをクリア
+    } else {
+      $("#message").text("都道府県を選択してください。"); // エラーメッセージを表示
+    }
   });
 });
 

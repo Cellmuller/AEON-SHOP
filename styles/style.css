@@ -350,9 +350,12 @@
     min-height: 16.5px;
 }
 .results-area .contents .cards .card > div:first-child > div:nth-child(2){
-    color: #A7217E;
     font-weight: bold;
     font-size: 22px;
+}
+.results-area .contents .cards .card > div:first-child > div:nth-child(2) a{
+    text-decoration: none;
+    color: #A7217E;
 }
 .results-area .contents .cards .card > div:nth-child(2) .flex{
     display: block;
