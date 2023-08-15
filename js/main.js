@@ -33,17 +33,15 @@ document
 
 // 地方選択モーダル
 $(document).ready(function () {
-  $(".text-wrapper > div").on("click", function () {
+  $(".text-wrapper > div").on("click", function (e) {
+    e.stopPropagation(); // この行を追加
     $(".location-selection-modal").fadeIn("slow");
   });
-
-  $(document).on("click", function (event) {
-    if (
-      !$(event.target).closest(".location-selection-modal").length &&
-      !$(event.target).closest(".text-wrapper > div").length
-    ) {
-      $(".location-selection-modal").fadeOut("slow");
-    }
+  $(document).on("click", function () {
+    $(".location-selection-modal").fadeOut("slow");
+  });
+  $(".map .location-selection-modal ul li").on("click", function () {
+    $(".results-area").fadeIn();
   });
 });
 
@@ -91,7 +89,7 @@ $(document).ready(function () {
   $(window).resize(checkWindowSize);
 });
 
-// モーダル制御
+// 該当店舗なし、位置情報未取得モーダル制御
 $(document).ready(function () {
   $(".close-button").on("click", function () {
     $(".no-store-modal , .location-info-modal, .modal-bg").fadeOut();
