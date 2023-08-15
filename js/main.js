@@ -48,6 +48,10 @@ $(document).ready(function () {
   $(".map .location-selection-modal ul li").on("click", function () {
     $(".results-area").fadeIn(); // results-areaを表示
   });
+  // モーダル内のリスト項目をクリックした場合の処理
+  $("#serch-location-btn").on("click", function () {
+    $(".results-area").fadeIn(); // results-areaを表示
+  });
 
   // #serch-btnをクリックした場合の処理
   $("#serch-btn").on("click", function (e) {
