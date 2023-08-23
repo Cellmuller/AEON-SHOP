@@ -180,12 +180,12 @@
 }
 .map .text-wrapper p{
     position: absolute;
-    top: 75px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 90px;
+    left: 55%;
+    transform: translateX(-55%);
     color: #DB1DA7;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 .map .text-wrapper > div{
     color: #DB1DA7;
