@@ -98,7 +98,6 @@
     cursor: pointer;
     appearance: none;
 }
-
 .map .pulldown-wrapper > div:first-child::after {
     content: "";
     position: absolute;
@@ -106,7 +105,7 @@
     top: 40%;
     transform: translateY(-50%);
     pointer-events: none;
-    border: solid #464646;
+    border: solid #6c6c6c;
     border-width: 0 2px 2px 0;
     padding: 3px;
     transform: rotate(45deg);
@@ -182,8 +181,9 @@
 
 .map .text-wrapper p{
     position: absolute;
-    top: 6%;
-    left: 35%;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
     color: #DB1DA7;
     font-weight: bold;
     font-size: 16px;
