@@ -180,8 +180,9 @@
 }
 .map .text-wrapper p{
     position: absolute;
-    top: 6%;
-    left: 35%;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
     color: #DB1DA7;
     font-weight: bold;
     font-size: 18px;
