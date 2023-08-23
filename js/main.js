@@ -1,6 +1,10 @@
-// SPアコーディオン
 $(function () {
   $(".ac-parent").on("click", function () {
+    // すべてのアコーディオンを閉じる
+    $(".ac-child").not($(this).next(".ac-child")).slideUp();
+    $(".ac-parent").not($(this)).removeClass("open");
+
+    // クリックしたアコーディオンをトグルする
     $(this).next(".ac-child").slideToggle();
     $(this).toggleClass("open");
   });
@@ -31,6 +35,24 @@ document
   .getElementById("serch-location-sp-btn")
   .addEventListener("click", getLocation);
 
+// #serch-btnをクリックした場合の処理
+$("#serch-btn").on("click", function (e) {
+  e.preventDefault();
+
+  // プルダウンの選択値を取得
+  const selectedPrefecture = $(".pulldown-wrapper select").val();
+
+  // プルダウンで「選択してください」が選択されている場合は何もせず、
+  // 都道府県が選択されている場合のみresults-areaを表示
+  if (selectedPrefecture !== "選択してください") {
+    $(".results-area").fadeIn();
+    $("#message").text("");
+    scrollToResults();
+  } else {
+    $("#message").text("都道府県を選択してください。");
+  }
+});
+
 //地方選択モーダル
 $(document).ready(function () {
   // クリックでモーダルを開く
@@ -38,39 +60,102 @@ $(document).ready(function () {
     e.stopPropagation();
     $(".location-selection-modal").fadeIn("slow");
   });
-
   // ドキュメント全体をクリックした場合、モーダルを閉じる
   $(document).on("click", function () {
     $(".location-selection-modal").fadeOut("slow");
   });
 
   // モーダル内のリスト項目をクリックした場合の処理
-  $(".map .location-selection-modal ul li").on("click", function () {
+  $(".map").on("click", ".location-selection-modal ul li", function () {
     $(".results-area").fadeIn();
+    scrollToResults();
   });
+
   // モーダル内のリスト項目をクリックした場合の処理
   $("#serch-location-btn").on("click", function () {
     $(".results-area").fadeIn();
+    scrollToResults();
   });
-
-  // #serch-btnをクリックした場合の処理
-  $("#serch-btn").on("click", function (e) {
-    e.preventDefault();
-
-    // プルダウンの選択値を取得
-    const selectedPrefecture = $(".pulldown-wrapper select").val();
-
-    // プルダウンで「選択してください」が選択されている場合は何もせず、
-    // 都道府県が選択されている場合のみresults-areaを表示
-    if (selectedPrefecture !== "選択してください") {
-      $(".results-area").fadeIn();
-      $("#message").text("");
-    } else {
-      $("#message").text("都道府県を選択してください。");
+  // #kyusyu をクリックしたときの処理
+  $(".map .text-wrapper #kyusyu").on("click", function () {
+    if ($(".location-selection-modal").is(":visible")) {
+      updateModalForKyusyu();
     }
   });
-});
+  // #kanto をクリックしたときの処理
+  $(".map .text-wrapper #kanto").on("click", function () {
+    if ($(".location-selection-modal").is(":visible")) {
+      updateModalForKanto();
+    }
+  });
 
+  // SP
+  $(".ac-child ul li ").on("click", function () {
+    $(".results-area").fadeIn();
+    scrollToResults();
+  });
+
+  $(".more-text").on("click", function () {
+    $("#cards2").fadeIn();
+    $(".more-text").hide();
+  });
+});
+function scrollToResults() {
+  $("html, body").animate(
+    {
+      scrollTop: $(".results-area").offset().top,
+    },
+    500
+  );
+}
+// モーダルを九州の都道府県に変更する関数
+function updateModalForKyusyu() {
+  let kyusyuPrefectures = [
+    { name: "福岡県", count: 10 },
+    { name: "佐賀県", count: 10 },
+    { name: "長崎県", count: 10 },
+    { name: "熊本県", count: 10 },
+    { name: "大分県", count: 10 },
+    { name: "宮崎県", count: 10 },
+    { name: "鹿児島県", count: 10 },
+    { name: "沖縄県", count: 10 }, // 九州地方には属していませんが、一般的に含める場合があります
+  ];
+
+  let html = "<ul>";
+  kyusyuPrefectures.forEach(function (prefecture) {
+    html +=
+      "<li>" + prefecture.name + "(<span>" + prefecture.count + "</span>)</li>";
+  });
+  html += "</ul>";
+
+  $(".location-selection-modal").html(html);
+}
+// モーダルを関東の都道府県に変更する関数
+function updateModalForKanto() {
+  var kantoPrefectures = [
+    { name: "東京都", count: 10 },
+    { name: "神奈川県", count: 10 },
+    { name: "千葉県", count: 10 },
+    { name: "埼玉県", count: 10 },
+    { name: "茨城県", count: 10 },
+    { name: "栃木県", count: 10 },
+    { name: "群馬県", count: 10 },
+  ];
+
+  var html = "<ul>";
+  kantoPrefectures.forEach(function (prefecture) {
+    html +=
+      "<li>" + prefecture.name + "(<span>" + prefecture.count + "</span>)</li>";
+  });
+  html += "</ul>";
+
+  $(".location-selection-modal").html(html);
+}
+// 現在地検索ボタンSPスクロール
+$("#serch-location-sp-btn").on("click", function () {
+  $(".results-area").fadeIn();
+  scrollToResults();
+});
 // TOPスクロール
 $(document).ready(function () {
   $('span:contains("マップ検索")')
@@ -91,7 +176,7 @@ $(document).ready(function () {
   $("#serch-btn").on("click", function (e) {
     e.preventDefault();
     if ($("select").val() === "選択してください") {
-      $("#message").text("※都道府県を選択して下さい").show();
+      $("#message").text("※都道府県を選択してください").show();
     } else {
       $("#message").hide();
     }
@@ -120,4 +205,67 @@ $(document).ready(function () {
   $(".close-button").on("click", function () {
     $(".no-store-modal , .location-info-modal, .modal-bg").fadeOut();
   });
+});
+
+// ボタンアイコン制御
+$(document).ready(function () {
+  $(".results-area .contents .cards .card > div:nth-child(3) a img").each(
+    function () {
+      $(this).data("original-src", $(this).attr("src"));
+    }
+  );
+
+  // 予約する
+  $(
+    ".results-area .contents .cards .card > div:nth-child(3) a:first-child"
+  ).hover(
+    function () {
+      var hoverImage = "./images/calendar-icon-w.png";
+      $(this).find("img").attr("src", hoverImage);
+    },
+    function () {
+      var originalImage = $(this).find("img").data("original-src");
+      $(this).find("img").attr("src", originalImage);
+    }
+  );
+  // 地図を表示
+  $(
+    ".results-area .contents .cards .card > div:nth-child(3) a:nth-child(2)"
+  ).hover(
+    function () {
+      var hoverImage = "./images/location-icon-w.png";
+      $(this).find("img").attr("src", hoverImage);
+    },
+    function () {
+      var originalImage = $(this).find("img").data("original-src");
+      $(this).find("img").attr("src", originalImage);
+    }
+  );
+
+  $(".cta-area > .flex > div > a img").each(function () {
+    $(this).data("original-src", $(this).attr("src"));
+  });
+
+  // オンライン予約
+  $(".cta-area > .flex > div:first-child > a").hover(
+    function () {
+      var hoverImage = "./images/monitor-icon.png";
+      $(this).find("img").attr("src", hoverImage);
+    },
+    function () {
+      var originalImage = $(this).find("img").data("original-src");
+      $(this).find("img").attr("src", originalImage);
+    }
+  );
+  // 電話予約
+  $(".cta-area > .flex > div:nth-child(2) > a").hover(
+    function () {
+      var hoverImage = "./images/tel-icon.png";
+      $(this).find("img").attr("src", hoverImage);
+    },
+    function () {
+      var originalImage = $(this).find("img").data("original-src");
+      $(this).find("img").attr("src", originalImage);
+    }
+  );
 });
