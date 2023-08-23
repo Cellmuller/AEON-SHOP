@@ -12,7 +12,8 @@ header .flex{
 }
 header .logo{
     display: block;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
 }
 header > div{
     flex: 50%;
@@ -49,12 +50,19 @@ header ul li a{
     display: block;
     width: 100%;
     padding: 6px 15px;
+    letter-spacing: 0px;
 }
 header ul li:nth-child(3) a{
     color: #fffb;
 }
 @media screen and (max-width:768px) {
+    header .logo {
+        display: block;
+        width: 60%;
+        margin: 0 ;
+    }
     header ul {
         display: none;
     }
+    
 }

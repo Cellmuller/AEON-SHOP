@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -111,7 +114,7 @@
                     <div id="message"></div>
                     <div class="btn-wrapper">
                         <button id="serch-btn">
-                            <img src="./images/serch-icon.png" class="serch-icon">検索
+                            <img src="./images/serch-icon-w.png" class="serch-icon">検索
                         </button>
                         <button id="serch-location-btn">
                             <img src="./images/location-icon.png" class="serch-icon">現在地から検索
@@ -149,13 +152,13 @@
                     </button>
                     <h2>エリアから探す</h2>
                     <dl class="ac">
-                        <dt class="ac-parent">北海道</dt>
+                        <dt class="ac-parent">北海道(<span>10</span>)</dt>
                         <dd class="ac-child">
                             <ul>
                                 <li>北海道</li>
                             </ul>
                         </dd>
-                        <dt class="ac-parent">東北</dt>
+                        <dt class="ac-parent">東北(<span>10</span>)</dt>
                         <dd class="ac-child">
                             <ul>
                                 <li>青森県</li>
@@ -166,7 +169,7 @@
                                 <li>福島県</li>
                             </ul>
                         </dd>
-                        <dt class="ac-parent">関東</dt>
+                        <dt class="ac-parent">関東(<span>10</span>)</dt>
                         <dd class="ac-child">
                             <ul>
                                 <li>茨城県</li>
@@ -178,18 +181,7 @@
                                 <li>神奈川県</li>
                             </ul>
                         </dd>
-                        <dt class="ac-parent">近畿</dt>
-                        <dd class="ac-child">
-                            <ul>
-                                <li>滋賀県</li>
-                                <li>京都府</li>
-                                <li>大阪府</li>
-                                <li>兵庫県</li>
-                                <li>奈良県</li>
-                                <li>和歌山県</li>
-                            </ul>
-                        </dd>
-                        <dt class="ac-parent">東海・甲信越・北陸</dt>
+                        <dt class="ac-parent">東海・甲信越・北陸(<span>10</span>)</dt>
                         <dd class="ac-child">
                             <ul>
                                 <li>岐阜県</li>
@@ -204,7 +196,18 @@
                                 <li>長野県</li>
                             </ul>
                         </dd>
-                        <dt class="ac-parent">中国・四国</dt>
+                        <dt class="ac-parent">近畿(<span>10</span>)</dt>
+                        <dd class="ac-child">
+                            <ul>
+                                <li>滋賀県</li>
+                                <li>京都府</li>
+                                <li>大阪府</li>
+                                <li>兵庫県</li>
+                                <li>奈良県</li>
+                                <li>和歌山県</li>
+                            </ul>
+                        </dd>
+                        <dt class="ac-parent">中国・四国(<span>10</span>)</dt>
                         <dd class="ac-child">
                             <ul>
                                 <li>鳥取県</li>
@@ -218,7 +221,7 @@
                                 <li>高知県</li>
                             </ul>
                         </dd>
-                        <dt class="ac-parent">九州・沖縄</dt>
+                        <dt class="ac-parent">九州・沖縄(<span>10</span>)</dt>
                         <dd class="ac-child">
                             <ul>
                                 <li>福岡県</li>
@@ -238,7 +241,7 @@
         <section class="results-area">
             <div class="contents">
                 <div class="num">
-                    <span>検索結果</span><span>2</span>店舗
+                    <span>検索結果</span><span>6</span>店舗
                 </div>
                 <div class="cards">
                     <div class="card">
@@ -263,7 +266,7 @@
                             </div>
                         </div>
                         <div>
-                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#calendar">
+                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#appointment">
                                 <img src="./images/calendar-icon.png" class="card-btn-icon">予約する
                             </a>
                             <a href="https://www.hokenmarket.net/shop/higashikurume.html#access">
@@ -293,7 +296,132 @@
                             </div>
                         </div>
                         <div>
-                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#calendar">
+                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#appointment">
+                                <img src="./images/calendar-icon.png" class="card-btn-icon">予約する
+                            </a>
+                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#access">
+                                <img src="./images/location-icon.png" class="card-btn-icon">地図を表示
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div><img src="./images/location-icon-g.png">3.8km</div>
+                            <div>
+                                <a href="https://www.hokenmarket.net/shop/higashikurume.html">イオンモール東久留米店<br>【※営業時間短縮のお知らせ】</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                〒203-0023<br>
+                                東京都東久留米市南沢5-17-62 イオンモール東久留米2階
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    <img src="./images/time-icon.png" class="card-time-icon">営業時間 10:00～21:00
+                                </div>
+                                <div>
+                                    <img src="./images/tel-icon-b.png" class="card-time-icon">電話番号 <a href="tel:0120399099">0120-399-099</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#appointment">
+                                <img src="./images/calendar-icon.png" class="card-btn-icon">予約する
+                            </a>
+                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#access">
+                                <img src="./images/location-icon.png" class="card-btn-icon">地図を表示
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-text-wrapper">
+                    <div class="more-text">さらに表示</div>
+                </div>
+                <div class="cards" id="cards2">
+                    <div class="card">
+                        <div>
+                            <div><img src="./images/location-icon-g.png">3.8km</div>
+                            <div>
+                                <a href="https://www.hokenmarket.net/shop/higashikurume.html">イオンモール東久留米店<br>【※営業時間短縮のお知らせ】</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                〒203-0023<br>
+                                東京都東久留米市南沢5-17-62 イオンモール東久留米2階
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    <img src="./images/time-icon.png" class="card-time-icon">営業時間 10:00～21:00
+                                </div>
+                                <div>
+                                    <img src="./images/tel-icon-b.png" class="card-time-icon">電話番号 <a href="tel:0120399099">0120-399-099</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#appointment">
+                                <img src="./images/calendar-icon.png" class="card-btn-icon">予約する
+                            </a>
+                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#access">
+                                <img src="./images/location-icon.png" class="card-btn-icon">地図を表示
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div><img src="./images/location-icon-g.png">3.8km</div>
+                            <div>
+                                <a href="https://www.hokenmarket.net/shop/higashikurume.html">イオンモール東久留米店<br>【※営業時間短縮のお知らせ】</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                〒203-0023<br>
+                                東京都東久留米市南沢5-17-62 イオンモール東久留米2階
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    <img src="./images/time-icon.png" class="card-time-icon">営業時間 10:00～21:00
+                                </div>
+                                <div>
+                                    <img src="./images/tel-icon-b.png" class="card-time-icon">電話番号 <a href="tel:0120399099">0120-399-099</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#appointment">
+                                <img src="./images/calendar-icon.png" class="card-btn-icon">予約する
+                            </a>
+                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#access">
+                                <img src="./images/location-icon.png" class="card-btn-icon">地図を表示
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div><img src="./images/location-icon-g.png">3.8km</div>
+                            <div>
+                                <a href="https://www.hokenmarket.net/shop/higashikurume.html">イオンモール東久留米店<br>【※営業時間短縮のお知らせ】</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                〒203-0023<br>
+                                東京都東久留米市南沢5-17-62 イオンモール東久留米2階
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    <img src="./images/time-icon.png" class="card-time-icon">営業時間 10:00～21:00
+                                </div>
+                                <div>
+                                    <img src="./images/tel-icon-b.png" class="card-time-icon">電話番号 <a href="tel:0120399099">0120-399-099</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://www.hokenmarket.net/shop/higashikurume.html#appointment">
                                 <img src="./images/calendar-icon.png" class="card-btn-icon">予約する
                             </a>
                             <a href="https://www.hokenmarket.net/shop/higashikurume.html#access">
@@ -314,19 +442,17 @@
             <div class="flex">
                 <div>
                     <p>
-                        パソコン・タブレット・スマホで<br>
-                        ご自宅などご希望の環境から保険相談が可能です。
+                        パソコン・タブレット・スマホで、<br class="br-sp-none">ご自宅などご希望の環境から保険相談が可能です。
                     </p>
-                    <a href="https://www.hokenmarket.net/shop/onlineten.html">
-                        <img src="./images/monitor-icon.png">オンライン相談の予約
+                    <a href="https://www.hokenmarket.net/shop/onlineten.html" data-hover-image="./images/monitor-icon.png">
+                        <img src="./images/monitor-icon-w.png">オンライン相談の予約
                     </a>
                 </div>
                 <div>
                     <p>
-                        お電話でより気軽に<br>
-                        生命保険に関するご相談が可能です。
+                        お電話でより気軽に、<br class="br-sp-none">生命保険に関するご相談が可能です。
                     </p>
-                    <a href="https://www.hokenmarket.net/shop/denwa.html">
+                    <a href="https://www.hokenmarket.net/shop/denwa.html" data-hover-image="./images/tel-icon.png">
                         <img src="./images/tel-icon-w.png">電話相談の予約
                     </a>
                 </div>

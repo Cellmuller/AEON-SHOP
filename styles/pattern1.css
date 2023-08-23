@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     letter-spacing: 2.5px;
-    font-family: "Yu Gothic";
+    font-family: 'ヒラギノ角ゴ ProN', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
 }
 /* パンくずリスト */
 .breadcrumb{
@@ -36,8 +36,8 @@
     color: #A7217E;
     position: relative;
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 75px;
+    font-size: 28px;
+    margin-bottom: 50px;
 }
 .map-area h1:after {
     content: '';
@@ -46,7 +46,7 @@
     bottom: -5px;
     transform: translateX(-50%);
     height: 2px;
-    width: 15%;
+    width: 12%;
     background-color: #A7217E;
 }
 .map-sp{
@@ -64,11 +64,11 @@
 .map .pulldown-wrapper{
     background-color: #fff;
     position: absolute;
-    top: 15%;
-    left: 5%;
-    max-width: 500px;
+    top: 20%;
+    left: 13%;
+    max-width: 450px;
     width: 100%;
-    padding: 50px 35px;
+    padding: 35px ;
 }
 .map .pulldown-wrapper > div:first-child{
     display: flex;
@@ -88,13 +88,14 @@
     padding: 15px;
     width: 100%;
     flex: 78%;
-    background-color: #FDF4E7;
+    background-color: #ffffff;
+    border: 1px solid #ececec !important;
     border: none;
     outline: none;
-    font-size: 18px;
+    font-size: 16px;
     color: #464646;
     cursor: pointer;
-    appearance: none; /* デフォルトの矢印を非表示にする */
+    appearance: none;
 }
 
 .map .pulldown-wrapper > div:first-child::after {
@@ -103,7 +104,7 @@
     left: 93%;
     top: 40%;
     transform: translateY(-50%);
-    pointer-events: none; /* 矢印がクリックを防がないようにする */
+    pointer-events: none;
     border: solid #464646;
     border-width: 0 2px 2px 0;
     padding: 3px;
@@ -118,7 +119,7 @@
 }
 .map .pulldown-wrapper .btn-wrapper{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 #serch-btn{
     background-color: #A7217E;
@@ -126,13 +127,14 @@
     width: 90%;
     padding: 15px;
     border-radius: 35px;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 15px;
     border: 2px solid #A7217E;
     font-weight: bold;
     position: relative;
     cursor: pointer;
     text-decoration: none;
+    transition: all .2s;
 }
 
 #serch-location-btn{
@@ -141,12 +143,13 @@
     width: 90%;
     padding: 15px;
     border-radius: 35px;
-    font-size: 18px;
+    font-size: 16px;
     border: 2px solid #D9D9D9;
     font-weight: bold;
     position: relative;
     cursor: pointer;
     text-decoration: none;
+    transition: all .2s;
 }
 
 #serch-btn::after,
@@ -171,13 +174,17 @@
     left: 20px;
     width: 8%;
 }
+#serch-btn:hover,
+#serch-location-btn:hover{
+    opacity: .7;
+}
 .map .text-wrapper p{
     position: absolute;
     top: 6%;
     left: 35%;
     color: #DB1DA7;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 .map .text-wrapper > div{
     color: #DB1DA7;
@@ -187,6 +194,12 @@
     padding: 10px 25px 10px 20px;
     border-radius: 3px;
     cursor: pointer;
+    transition: all .2s;
+    font-size: 14px;
+}
+.map .text-wrapper > div:hover{
+    background-color: #DB1DA7;
+    color: #fff;
 }
 .map .text-wrapper > div::after{
     content: '';
@@ -194,6 +207,16 @@
     right: 10px;
     top: 45%;
     border: solid #DB1DA7;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(315deg) translateY(-45%);
+}
+.map .text-wrapper > div:hover:after{
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    border: solid #fff;
     border-width: 0 2px 2px 0;
     padding: 3px;
     transform: rotate(315deg) translateY(-45%);
@@ -231,7 +254,7 @@
 }
 .map .text-wrapper #kyusyu{
     position: absolute;
-    top: 78%;
+    top: 82%;
     left: 41%;
 }
 /* 地方選択時モーダル */
@@ -264,6 +287,7 @@
     position: relative;
     transition: all .2s;
 }
+
 
 .map .location-selection-modal ul li:hover {
     color: #fff;
@@ -410,6 +434,13 @@
     text-decoration: none;
     padding: 15px;
     position: relative;
+    transition: all .2s;
+}
+.no-store-modal .contents > .flex > div > a:hover,
+.location-info-modal .contents > .flex > div > a:hover{
+    background-color: #fff;
+    color: #A7217E;
+
 }
 .no-store-modal .contents > .flex > div > a::after,
 .location-info-modal .contents > .flex > div > a::after{
@@ -422,6 +453,18 @@
     padding: 3px;
     transform: rotate(-45deg);
 }
+.no-store-modal .contents > .flex > div > a:hover::after,
+.location-info-modal .contents > .flex > div > a:hover::after{
+    border: solid #A7217E;
+    content: "";
+    position: absolute;
+    left: 93%;
+    top: 45%;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
 .no-store-modal .contents > .flex > div > a img,
 .location-info-modal .contents > .flex > div > a img{
     position: absolute;
@@ -444,7 +487,7 @@
     padding: 50px 0;
 }
 .results-area .contents{
-    width: 90%;
+    width: 75%;
     margin: 0 auto;
 }
 .results-area .contents .num {
@@ -555,14 +598,15 @@
     text-align: center;
     color: #707070;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 .results-area .contents .cards .card > div > p:first-child{
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 20px;
 }
 .results-area .contents .cards .card > div > p span{
     color: #A7217E;
+    cursor: pointer;
 }
 .access-on-button{
     color: #707070 !important;
@@ -577,14 +621,14 @@
 }
 .cta-area h2 .cta-title-img{
     display: block;
-    width: 30%;
+    width: 28%;
     margin: 0 auto;
 }
 .cta-area > p{
     color: #fff;
     text-align: center;
     margin: 25px 0;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
 }
 .cta-area > .flex{
@@ -618,13 +662,14 @@
     background-color: #A7217E;
     color: #fff;
     border-radius: 35px;
-    font-size: 20px;
+    font-size: 18px;
     border: 2px solid #A7217E;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
     padding: 15px;
     position: relative;
+    transition: all .2s;
 }
 .cta-area > .flex > div > a::after{
     content: "";
@@ -635,6 +680,15 @@
     border-width: 0 2px 2px 0;
     padding: 3px;
     transform: rotate(-45deg);
+}
+.cta-area > .flex > div > a:hover {
+    background-color: #fff;
+    color: #A7217E;
+    border: 2px solid #A7217E;
+}
+
+.cta-area > .flex > div > a:hover::after {
+    border-color: #A7217E;
 }
 .cta-area > .flex > div > a img{
     position: absolute;
@@ -692,6 +746,7 @@
     .map .pulldown-wrapper {
         width: 35%;
         padding: 30px 20px;
+        left: 7%;
     }
     .map .pulldown-wrapper > div:first-child {
         display: block;
@@ -880,6 +935,9 @@
         padding: 3px;
         transform: rotate(-45deg) translateY(-50%);
     }
+    .results-area .contents {
+        width: 90%;
+    }
     .results-area .contents .cards .card {
         display: block;
         padding: 25px 0;
@@ -953,6 +1011,9 @@
     .cta-area > .flex > div {
         padding: 20px 0;
     }
+    .cta-area > .flex > div > p {
+        height: auto;
+    }
     .cta-area > .flex > div > a {
         font-size: 18px;
         padding: 10px;
@@ -981,6 +1042,9 @@
     .no-store-modal .contents, .location-info-modal .contents {
         padding: 15px;
     }
+    .br-sp-none{
+        display: none;
+    }
 }
 @media screen and (max-width:430px) {
     .cta-area > .flex {
@@ -1006,29 +1070,30 @@
         left: 90%;
     }
     .no-store-modal .contents, .location-info-modal .contents {
-        padding: 15px 10px;
+        padding: 15px;
     }
     .no-store-modal .title, .location-info-modal .title {
-        padding: 10px;
+        padding: 15px;
     }
     .no-store-modal .title > div, .location-info-modal .title > div {
         margin-bottom: 10px;
-        font-size: 20px;
+        font-size: 18px;
     }
     .no-store-modal .title > p, .location-info-modal .title > p {
-        font-size: 15px;
+        font-size: 14px;
     }
     .no-store-modal .contents > div:first-child, .location-info-modal .contents > div:first-child {
-        font-size: 18px;
+        font-size: 16px;
         padding-bottom: 10px;
+        margin-bottom: 0;
     }
     .no-store-modal .contents > .flex > div > p, .location-info-modal .contents > .flex > div > p {
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 15px;
         height: auto;
     }
     .no-store-modal .contents > .flex > div > a, .location-info-modal .contents > .flex > div > a {
-        font-size: 16px;
+        font-size: 14px;
     }
     .no-store-modal .contents > .flex > div > a img, .location-info-modal .contents > .flex > div > a img {
         left: 15px;
