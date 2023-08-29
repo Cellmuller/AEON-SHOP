@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     letter-spacing: 2.5px;
-    font-family: 'ヒラギノ角ゴ ProN', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+    font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
 }
 /* パンくずリスト */
 .breadcrumb{
@@ -18,6 +18,8 @@
     display: inline-block;
     color: #464646;
     font-weight: bold;
+    font-weight: normal;
+    letter-spacing: 0px;
     
 }
 .breadcrumb li + li:before {
@@ -90,13 +92,13 @@
     width: 100%;
     flex: 78%;
     background-color: #ffffff;
-    border: 1px solid #ececec !important;
-    border: none;
+    border: 1px solid #ececec;
     outline: none;
     font-size: 14px;
     color: #464646;
     cursor: pointer;
     appearance: none;
+    -webkit-appearance: none;
 }
 .map .pulldown-wrapper > div:first-child::after {
     content: "";
@@ -112,10 +114,10 @@
 }
 #message{
     color: red;
-    width: 80%;
+    width: 250px;
     margin-left: auto;
     line-height: 2;
-    padding-left: 15px;
+    font-size: 14px;
 }
 .map .pulldown-wrapper .btn-wrapper{
     text-align: center;
@@ -465,7 +467,7 @@
 
 }
 .results-area .contents .more-text-wrapper .more-text {
-    padding: 10px 25px;
+    padding: 7px 25px;
     color: #A7217E;
     font-weight: bold;
     position: relative;
@@ -506,12 +508,12 @@
     color: #fff;
     text-align: center;
     margin: 25px 0;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 }
 .cta-area > .flex{
     background-color: #fff;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     padding: 25px;
     display: flex;
@@ -527,7 +529,7 @@
     text-align: center;
     margin-bottom: 25px;
     color: #606060;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     height: 100px;
     display: flex;
@@ -540,7 +542,7 @@
     background-color: #A7217E;
     color: #fff;
     border-radius: 35px;
-    font-size: 18px;
+    font-size: 16px;
     border: 2px solid #A7217E;
     font-weight: bold;
     cursor: pointer;
@@ -675,10 +677,13 @@
     .map .text-wrapper #kyusyu {
         left: 33%;
     }
+    .results-area .contents {
+        width: 85%;
+    }
     
     
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:968px) {
     .breadcrumb {
         width: 90%;
     }
@@ -732,6 +737,7 @@
         top: 50%;
         transform: translateY(-50%);
         left: 20px;
+        width: 25px;
     }
     .map-sp .contents h2{
         text-align: center;
@@ -826,7 +832,7 @@
         padding-left: 25px;
     }
     .results-area .contents .cards .card > div:nth-child(2) .flex > div .card-time-icon {
-        width: 3%;
+        width: 18px;
     }
     
     .results-area .contents .cards .card > div:nth-child(3) {
@@ -848,7 +854,7 @@
     }
     .card-btn-icon {
         left: 15px;
-        width: 8%;
+        width: 20px;
     }
     
     .results-area .contents .cards .card > div > p {
@@ -886,6 +892,10 @@
         font-size: 18px;
         padding: 10px;
     }
+    .cta-area > .flex > div > a img {
+        left: 35px;
+        width: 20px;
+    }
 
     .fixed-area {
         position: fixed;
@@ -912,6 +922,13 @@
     }
 }
 @media screen and (max-width:430px) {
+    #serch-location-sp-btn .serch-icon{
+        width: 8%;
+    }
+    .card-btn-icon {
+        left: 13px;
+        width: 18px;
+    }
     .cta-area > .flex {
         background-color: #fff;
         width: 90%;
@@ -929,7 +946,6 @@
     }
     .cta-area > .flex > div > a img {
         left: 15px;
-        width: 5%;
     }
     .cta-area > .flex > div > a::after {
         left: 90%;
