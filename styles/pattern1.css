@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     letter-spacing: 2.5px;
-    font-family: 'ヒラギノ角ゴ ProN', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+    font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
 }
 /* パンくずリスト */
 .breadcrumb{
@@ -89,13 +89,13 @@
     width: 100%;
     flex: 78%;
     background-color: #ffffff;
-    border: 1px solid #ececec !important;
-    border: none;
+    border: 1px solid #ececec;
     outline: none;
-    font-size: 16px;
+    font-size: 14px;
     color: #464646;
     cursor: pointer;
     appearance: none;
+    -webkit-appearance: none;
 }
 
 .map .pulldown-wrapper > div:first-child::after {
@@ -316,7 +316,7 @@
     border-bottom: 1px solid #E9A6DC;
 }
 /* 該当店舗なしモーダル / 位置情報未取得モーダル */
-.no-store-modal,
+/* .no-store-modal,
 .location-info-modal{
     position: fixed;
     top: 50%;
@@ -482,7 +482,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 3;
-}
+} */
 /* results-area */
 .results-area {
     padding: 50px 0;
@@ -802,7 +802,7 @@
         left: 33%;
     }
 }
-@media screen and (max-width:968px) {
+/* @media screen and (max-width:968px) {
     .no-store-modal .contents > .flex, .location-info-modal .contents > .flex {
         background-color: #fff;
         width: 100%;
@@ -817,7 +817,7 @@
     .no-store-modal .contents > .flex > div > a, .location-info-modal .contents > .flex > div > a {
         font-size: 20px;
     }
-}
+} */
 @media screen and (max-width:768px) {
     .breadcrumb {
         width: 90%;
@@ -840,6 +840,7 @@
         margin: 0 auto;
         padding: 50px 15px;
     }
+    
     #serch-location-sp-btn{
         background-color: #A7217E;
         color: #fff;
@@ -872,6 +873,7 @@
         top: 50%;
         transform: translateY(-50%);
         left: 20px;
+        width: 8%;
     }
     .map-sp .contents h2{
         text-align: center;
@@ -1048,6 +1050,9 @@
     }
 }
 @media screen and (max-width:430px) {
+    #serch-location-sp-btn .serch-icon{
+        width: 8%;
+    }
     .cta-area > .flex {
         background-color: #fff;
         width: 90%;
@@ -1070,7 +1075,7 @@
     .cta-area > .flex > div > a::after {
         left: 90%;
     }
-    .no-store-modal .contents, .location-info-modal .contents {
+    /* .no-store-modal .contents, .location-info-modal .contents {
         padding: 15px;
     }
     .no-store-modal .title, .location-info-modal .title {
@@ -1099,5 +1104,5 @@
     .no-store-modal .contents > .flex > div > a img, .location-info-modal .contents > .flex > div > a img {
         left: 15px;
         width: 8%;
-    }
+    } */
 }

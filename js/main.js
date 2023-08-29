@@ -220,7 +220,7 @@ $(document).ready(function () {
     ".results-area .contents .cards .card > div:nth-child(3) a:first-child"
   ).hover(
     function () {
-      var hoverImage = "./images/calendar-icon-w.png";
+      var hoverImage = "./images/calendar-icon-w.webp";
       $(this).find("img").attr("src", hoverImage);
     },
     function () {
@@ -233,7 +233,7 @@ $(document).ready(function () {
     ".results-area .contents .cards .card > div:nth-child(3) a:nth-child(2)"
   ).hover(
     function () {
-      var hoverImage = "./images/location-icon-w.png";
+      var hoverImage = "./images/location-icon-w.webp";
       $(this).find("img").attr("src", hoverImage);
     },
     function () {
@@ -249,7 +249,7 @@ $(document).ready(function () {
   // オンライン予約
   $(".cta-area > .flex > div:first-child > a").hover(
     function () {
-      var hoverImage = "./images/monitor-icon.png";
+      var hoverImage = "./images/monitor-icon.webp";
       $(this).find("img").attr("src", hoverImage);
     },
     function () {
@@ -260,7 +260,7 @@ $(document).ready(function () {
   // 電話予約
   $(".cta-area > .flex > div:nth-child(2) > a").hover(
     function () {
-      var hoverImage = "./images/tel-icon.png";
+      var hoverImage = "./images/tel-icon.webp";
       $(this).find("img").attr("src", hoverImage);
     },
     function () {

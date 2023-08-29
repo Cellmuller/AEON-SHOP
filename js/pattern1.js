@@ -158,3 +158,12 @@ $(document).ready(function () {
     }
   );
 });
+// resultまでスクロール
+$(document).ready(function () {
+  $("html, body").animate(
+    {
+      scrollTop: $(".results-area").offset().top,
+    },
+    1000
+  );
+});
