@@ -55,7 +55,7 @@
 .map{
     background-color: #EFD1E8;
     height: 700px;
-    background-image: url(../images/map-bg.png);
+    background-image: url(../images/map-bg.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -315,174 +315,6 @@
 .map .location-selection-modal ul li:not(:last-child){
     border-bottom: 1px solid #E9A6DC;
 }
-/* 該当店舗なしモーダル / 位置情報未取得モーダル */
-/* .no-store-modal,
-.location-info-modal{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 60%;
-    z-index: 5;
-    display: none;
-}
-.no-store-modal{
-    display: block;
-}
-.close-button {
-    position: absolute;
-    top: -10px;
-    right: 0px;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px #8d8d8d;
-    cursor: pointer;
-}
-
-.close-button::before, .close-button::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    height: 2px;
-    background-color: #A7217E;
-}
-
-.close-button::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.close-button::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.no-store-modal .title,
-.location-info-modal .title{
-    background-color: #A7217E;
-    color: #fff;
-    text-align: center;
-    padding: 25px;
-    border-radius: 15px 15px 0 0;
-}
-.no-store-modal .title > div,
-.location-info-modal .title > div{
-    margin-bottom: 15px;
-    font-size: 22px;
-    font-weight: bold;
-}
-.no-store-modal .contents,
-.location-info-modal .contents{
-    background-color: #fff;
-    padding: 35px;
-    text-align: center;
-    border-radius: 0px 0px 15px 15px;
-}
-.no-store-modal .contents > div:first-child,
-.location-info-modal .contents > div:first-child{
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 24px;
-    color: #A7217E;
-    font-weight: bold;
-    border-bottom: 2px solid #A7217E;
-    display: inline-block;
-}
-.no-store-modal .title > p,
-.location-info-modal .title > p{
-    font-size: 18px;
-}
-.no-store-modal .contents > .flex,
-.location-info-modal .contents > .flex{
-    background-color: #fff;
-    width: 95%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-}
-.no-store-modal .contents > .flex > div,
-.location-info-modal .contents > .flex > div{
-    flex: 50%;
-    padding: 20px;
-}
-.no-store-modal .contents > .flex > div > p,
-.location-info-modal .contents > .flex > div > p{
-    text-align: center;
-    margin-bottom: 25px;
-    color: #606060;
-    font-size: 18px;
-    font-weight: bold;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.no-store-modal .contents > .flex > div > a,
-.location-info-modal .contents > .flex > div > a{
-    display: block;
-    text-align: center;
-    background-color: #A7217E;
-    color: #fff;
-    border-radius: 35px;
-    font-size: 20px;
-    border: 2px solid #A7217E;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 15px;
-    position: relative;
-    transition: all .2s;
-}
-.no-store-modal .contents > .flex > div > a:hover,
-.location-info-modal .contents > .flex > div > a:hover{
-    background-color: #fff;
-    color: #A7217E;
-
-}
-.no-store-modal .contents > .flex > div > a::after,
-.location-info-modal .contents > .flex > div > a::after{
-    content: "";
-    position: absolute;
-    left: 93%;
-    top: 45%;
-    border: solid #fff;
-    border-width: 0 2px 2px 0;
-    padding: 3px;
-    transform: rotate(-45deg);
-}
-.no-store-modal .contents > .flex > div > a:hover::after,
-.location-info-modal .contents > .flex > div > a:hover::after{
-    border: solid #A7217E;
-    content: "";
-    position: absolute;
-    left: 93%;
-    top: 45%;
-    border-width: 0 2px 2px 0;
-    padding: 3px;
-    transform: rotate(-45deg);
-}
-
-.no-store-modal .contents > .flex > div > a img,
-.location-info-modal .contents > .flex > div > a img{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 35px;
-    width: 5%;
-}
-.modal-bg{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 3;
-} */
 /* results-area */
 .results-area {
     padding: 50px 0;
@@ -802,22 +634,6 @@
         left: 33%;
     }
 }
-/* @media screen and (max-width:968px) {
-    .no-store-modal .contents > .flex, .location-info-modal .contents > .flex {
-        background-color: #fff;
-        width: 100%;
-        display: block;
-    }
-    .no-store-modal .contents > .flex > div, .location-info-modal .contents > .flex > div {
-        padding: 20px 0px;
-    }
-    .no-store-modal .contents > .flex > div > p, .location-info-modal .contents > .flex > div > p {
-        font-size: 18px;
-    }
-    .no-store-modal .contents > .flex > div > a, .location-info-modal .contents > .flex > div > a {
-        font-size: 20px;
-    }
-} */
 @media screen and (max-width:768px) {
     .breadcrumb {
         width: 90%;
@@ -1075,34 +891,9 @@
     .cta-area > .flex > div > a::after {
         left: 90%;
     }
-    /* .no-store-modal .contents, .location-info-modal .contents {
-        padding: 15px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    _::-webkit-full-page-media, _:future, .map .location-selection-modal ul {
+        filter: drop-shadow(0px 0px 0px #949494);
     }
-    .no-store-modal .title, .location-info-modal .title {
-        padding: 15px;
-    }
-    .no-store-modal .title > div, .location-info-modal .title > div {
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
-    .no-store-modal .title > p, .location-info-modal .title > p {
-        font-size: 14px;
-    }
-    .no-store-modal .contents > div:first-child, .location-info-modal .contents > div:first-child {
-        font-size: 16px;
-        padding-bottom: 10px;
-        margin-bottom: 0;
-    }
-    .no-store-modal .contents > .flex > div > p, .location-info-modal .contents > .flex > div > p {
-        font-size: 14px;
-        margin-bottom: 15px;
-        height: auto;
-    }
-    .no-store-modal .contents > .flex > div > a, .location-info-modal .contents > .flex > div > a {
-        font-size: 14px;
-    }
-    .no-store-modal .contents > .flex > div > a img, .location-info-modal .contents > .flex > div > a img {
-        left: 15px;
-        width: 8%;
-    } */
 }

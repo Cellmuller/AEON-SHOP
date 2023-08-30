@@ -57,7 +57,7 @@
 .map{
     background-color: #EFD1E8;
     height: 700px;
-    background-image: url(../images/map-bg.png);
+    background-image: url(../images/map-bg.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -443,53 +443,6 @@
 }
 .results-area .contents .cards .card > div:nth-child(3) a:first-child{
     margin-bottom: 15px;
-}
-/* 該当店舗がない場合 */
-.card.no-item{
-    padding: 50px 0 !important;
-}
-.results-area .contents .cards .card > div > p{
-    text-align: center;
-    color: #707070;
-    font-weight: bold;
-    font-size: 18px;
-}
-.results-area .contents .cards .card > div > p:first-child{
-    margin-bottom: 20px;
-    font-size: 22px;
-}
-.results-area .contents .cards .card > div > p span{
-    color: #A7217E;
-}
-.results-area .contents .more-text-wrapper{
-    text-align: center;
-    margin-top: 25px;
-
-}
-.results-area .contents .more-text-wrapper .more-text {
-    padding: 7px 25px;
-    color: #A7217E;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    transition: all .2s;
-    border: 2px solid #A7217E;
-    border-radius: 35px;
-    transition: all .2s;
-    min-width: 185px;
-    width: 16%;
-}
-.results-area .contents .more-text-wrapper .more-text:hover{
-    color: #fff;
-    background-color: #A7217E;
-}
-
-.access-on-button{
-    color: #707070 !important;
-}
-#cards2{
-    display: none;
 }
 /* cta-area */
 .cta-area {
@@ -951,4 +904,10 @@
         left: 90%;
     }
     
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    _::-webkit-full-page-media, _:future, .map .location-selection-modal ul {
+        filter: drop-shadow(0px 0px 0px #949494);
+    }
 }
