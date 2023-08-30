@@ -1,11 +1,8 @@
 // SPアコーディオン
 $(function () {
   $(".ac-parent").on("click", function () {
-    // すべてのアコーディオンを閉じる
     $(".ac-child").not($(this).next(".ac-child")).slideUp();
     $(".ac-parent").not($(this)).removeClass("open");
-
-    // クリックしたアコーディオンをトグルする
     $(this).next(".ac-child").slideToggle();
     $(this).toggleClass("open");
   });
@@ -36,49 +33,21 @@ document
   .getElementById("serch-location-sp-btn")
   .addEventListener("click", getLocation);
 
-//地方選択モーダル
+// #serch-btnをクリックした場合の処理
 $(document).ready(function () {
-  // クリックでモーダルを開く
-  $(".text-wrapper > div").on("click", function (e) {
-    e.stopPropagation();
-    $(".location-selection-modal").fadeIn("slow");
-  });
-
-  // ドキュメント全体をクリックした場合、モーダルを閉じる
-  $(document).on("click", function () {
-    $(".location-selection-modal").fadeOut("slow");
-  });
-
-  // モーダル内のリスト項目をクリックした場合の処理
-  $(".map .location-selection-modal ul li").on("click", function () {
-    $(".results-area").fadeIn();
-  });
-  // モーダル内のリスト項目をクリックした場合の処理
-  $("#serch-location-btn").on("click", function () {
-    $(".results-area").fadeIn();
-  });
-
-  // #serch-btnをクリックした場合の処理
   $("#serch-btn").on("click", function (e) {
     e.preventDefault();
-
-    // プルダウンの選択値を取得
-    const selectedPrefecture = $(".pulldown-wrapper select").val();
-
-    // プルダウンで「選択してください」が選択されている場合は何もせず、
-    // 都道府県が選択されている場合のみresults-areaを表示
-    if (selectedPrefecture !== "選択してください") {
-      $(".results-area").fadeIn();
-      $("#message").text("");
+    if ($("select").val() === "選択してください") {
+      $("#message").text("※都道府県を選択してください").show();
     } else {
-      $("#message").text("都道府県を選択してください。");
+      $("#message").hide();
     }
   });
+});
 
-  // SP
-  $(".ac-child ul li ").on("click", function () {
-    $(".results-area").fadeIn();
-  });
+// SP
+$(".ac-child ul li ").on("click", function () {
+  $(".results-area").fadeIn();
 });
 
 // Mapまでスクロール
@@ -120,13 +89,6 @@ $(document).ready(function () {
   }
   checkWindowSize();
   $(window).resize(checkWindowSize);
-});
-
-// 該当店舗なし、位置情報未取得モーダル制御
-$(document).ready(function () {
-  $(".close-button").on("click", function () {
-    $(".no-store-modal , .location-info-modal, .modal-bg").fadeOut();
-  });
 });
 
 // ボタンアイコン制御

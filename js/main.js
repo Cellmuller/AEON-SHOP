@@ -1,10 +1,8 @@
+// spアコーディオン
 $(function () {
   $(".ac-parent").on("click", function () {
-    // すべてのアコーディオンを閉じる
     $(".ac-child").not($(this).next(".ac-child")).slideUp();
     $(".ac-parent").not($(this)).removeClass("open");
-
-    // クリックしたアコーディオンをトグルする
     $(this).next(".ac-child").slideToggle();
     $(this).toggleClass("open");
   });
@@ -27,7 +25,6 @@ function getLocation() {
     console.log("Geolocation is not supported by this browser.");
   }
 }
-
 document
   .getElementById("serch-location-btn")
   .addEventListener("click", getLocation);
@@ -38,12 +35,7 @@ document
 // #serch-btnをクリックした場合の処理
 $("#serch-btn").on("click", function (e) {
   e.preventDefault();
-
-  // プルダウンの選択値を取得
   const selectedPrefecture = $(".pulldown-wrapper select").val();
-
-  // プルダウンで「選択してください」が選択されている場合は何もせず、
-  // 都道府県が選択されている場合のみresults-areaを表示
   if (selectedPrefecture !== "選択してください") {
     $(".results-area").fadeIn();
     $("#message").text("");
@@ -100,6 +92,7 @@ $(document).ready(function () {
     $(".more-text").hide();
   });
 });
+//results-areaにスクロールする関数
 function scrollToResults() {
   $("html, body").animate(
     {
