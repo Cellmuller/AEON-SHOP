@@ -55,7 +55,7 @@ header ul li a{
 header ul li:nth-child(3) a{
     color: #fffb;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:968px) {
     header .logo {
         display: block;
         width: 60%;

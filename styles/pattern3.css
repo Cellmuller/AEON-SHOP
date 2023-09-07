@@ -934,3 +934,13 @@
         filter: drop-shadow(0px 0px 0px #949494);
     }
 }
+@media print{
+    html{
+        margin: auto;
+        padding: auto;
+        zoom: 50%;
+    }
+    _::-webkit-full-page-media, _:future, html{
+        zoom: 58% !important;
+    }
+}
