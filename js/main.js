@@ -68,6 +68,13 @@ $(document).ready(function () {
     $(".results-area").fadeIn();
     scrollToResults();
   });
+  // #hokkaido をクリックしたときの処理
+  $(
+    ".map .text-wrapper #hokkaido, body > main > section.map-area > div.map-sp > div > dl > dt:nth-child(1)"
+  ).on("click", function () {
+    $(".results-area").fadeIn();
+    scrollToResults();
+  });
   // #kyusyu をクリックしたときの処理
   $(".map .text-wrapper #kyusyu").on("click", function () {
     if ($(".location-selection-modal").is(":visible")) {
@@ -259,6 +266,31 @@ $(document).ready(function () {
     function () {
       var originalImage = $(this).find("img").data("original-src");
       $(this).find("img").attr("src", originalImage);
+    }
+  );
+});
+
+// mapボタン反転
+$(document).ready(function () {
+  $("#serch-btn").hover(
+    function () {
+      // ホバー開始時
+      $(this).find(".serch-icon").attr("src", "./images/serch-icon.webp");
+    },
+    function () {
+      // ホバー終了時
+      $(this).find(".serch-icon").attr("src", "./images/serch-icon-w.webp");
+    }
+  );
+
+  $("#serch-location-btn").hover(
+    function () {
+      // ホバー開始時
+      $(this).find(".serch-icon").attr("src", "./images/location-icon-w.webp");
+    },
+    function () {
+      // ホバー終了時
+      $(this).find(".serch-icon").attr("src", "./images/location-icon.webp");
     }
   );
 });
