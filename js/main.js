@@ -48,7 +48,7 @@ $("#serch-btn").on("click", function (e) {
 //地方選択モーダル
 $(document).ready(function () {
   // クリックでモーダルを開く
-  $(".text-wrapper > div").on("click", function (e) {
+  $("#tohoku,#kanto,#tokai,#kinki,#shikoku,#kyusyu").on("click", function (e) {
     e.stopPropagation();
     $(".location-selection-modal").fadeIn("slow");
   });

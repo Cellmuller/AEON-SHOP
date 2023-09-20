@@ -138,13 +138,7 @@
     text-decoration: none;
     transition: all .2s;
 }
-#serch-btn:hover{
-    background-color: #fff;
-    color: #A7217E;
-}
-#serch-btn:hover#serch-btn::after{
-    border-color: #A7217E;
-}
+
 #serch-location-btn{
     background-color: #ffffff;
     color: #A7217E;
@@ -159,14 +153,7 @@
     text-decoration: none;
     transition: all .2s;
 }
-#serch-location-btn:hover{
-    background-color: #A7217E;
-    border: 2px solid #A7217E;
-    color: #fff;
-}
-#serch-location-btn:hover#serch-location-btn::after{
-    border-color: #fff;
-}
+
 #serch-btn::after,
 #serch-location-btn::after{
     content: "";
@@ -188,6 +175,10 @@
     transform: translateY(-50%);
     left: 20px;
     width: 8%;
+}
+#serch-btn:hover,
+#serch-location-btn:hover{
+    opacity: .7;
 }
 
 .map .text-wrapper p{
@@ -301,6 +292,7 @@
     transition: all .2s;
 }
 
+
 .map .location-selection-modal ul li:hover {
     color: #fff;
     background-color: #DB1DA7;
@@ -320,7 +312,6 @@
 .map .location-selection-modal ul li:hover::after {
     border-color: #fff;
 }
-
 .map .location-selection-modal ul li:nth-child(odd){
     border-right: 1px solid #E9A6DC;
 }
@@ -330,10 +321,9 @@
 /* results-area */
 .results-area {
     padding: 50px 0;
-    display: none;
 }
 .results-area .contents{
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
 }
 .results-area .contents .num {
@@ -341,7 +331,7 @@
     color: #606060;
 }
 .results-area .contents .num span:nth-of-type(2){
-    font-size: 28px;
+    font-size: 36px;
     color: #A7217E;
     font-weight: bold;
     display: inline-block;
@@ -350,7 +340,7 @@
 .results-area .contents .cards .card{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     border-top: 2px solid #D9D9D9;
     padding: 25px 0;
 }
@@ -360,7 +350,7 @@
 }
 .results-area .contents .cards .card > div:nth-child(2){
     flex: 30%;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #606060;
 }
@@ -374,36 +364,21 @@
     display: inline-block;
     padding: 3px 5px;
     margin-bottom: 5px;
-    text-align: right;
-    position: relative;
-    min-width: 80px;
-    font-size: 12px;
 
 }
 .results-area .contents .cards .card > div:first-child > div:first-child img{
     display: inline-block;
     width: 15%;
+    margin-right: 5px;
     vertical-align: middle;
+    margin-bottom: 3px;
     min-width: 13px;
     min-height: 16.5px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 5px;
 }
 .results-area .contents .cards .card > div:first-child > div:nth-child(2){
-    font-weight: bold;
-    font-size: 16px;
-}
-.results-area .contents .cards .card > div:first-child > div:nth-child(2) a{
-    text-decoration: none;
     color: #A7217E;
-}
-body > main > section.results-area > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a{
-    text-decoration: underline !important;
-}
-body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div.flex > div:nth-child(2) > a{
-    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 22px;
 }
 .results-area .contents .cards .card > div:nth-child(2) .flex{
     display: block;
@@ -424,7 +399,6 @@ body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) >
     transform: translateY(-50%);
     left: 0px;
     width: 4%;
-    min-width: 15px;
 }
 .results-area .contents .cards .card > div:nth-child(3) a{
     display: block;
@@ -437,17 +411,10 @@ body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) >
     font-weight: bold;
     width: 50%;
     margin-left: auto;
-    font-size: 16px;
+    font-size: 18px;
     position: relative;
-    min-width: 185px;
-    transition: all .2s;
+    min-width: 150px;
 }
-.results-area .contents .cards .card > div:nth-child(3) a:hover {
-    background-color: #A7217E;
-    color: #fff;
-    border: 2px solid #A7217E;
-}
-
 .card-btn-icon{
     position: absolute;
     top: 50%;
@@ -467,44 +434,19 @@ body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) >
     text-align: center;
     color: #707070;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 .results-area .contents .cards .card > div > p:first-child{
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 20px;
 }
 .results-area .contents .cards .card > div > p span{
     color: #A7217E;
-}
-.results-area .contents .more-text-wrapper{
-    text-align: center;
-    margin-top: 25px;
-
-}
-.results-area .contents .more-text-wrapper .more-text {
-    padding: 7px 25px;
-    color: #A7217E;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
     cursor: pointer;
-    transition: all .2s;
-    border: 2px solid #A7217E;
-    border-radius: 35px;
-    transition: all .2s;
-    min-width: 185px;
-    width: 16%;
+    text-decoration: underline;
 }
-.results-area .contents .more-text-wrapper .more-text:hover{
-    color: #fff;
-    background-color: #A7217E;
-}
-
 .access-on-button{
     color: #707070 !important;
-}
-#cards2{
-    display: none;
 }
 /* cta-area */
 .cta-area {
@@ -528,7 +470,7 @@ body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) >
 }
 .cta-area > .flex{
     background-color: #fff;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     padding: 25px;
     display: flex;
@@ -673,6 +615,9 @@ body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) >
         left: 90%;
         top: 40%;
     }
+    .no-store-modal, .location-info-modal {
+        width: 90%;
+    }
     .cta-area h2 .cta-title-img {
         width: 45%;
     }
@@ -695,8 +640,6 @@ body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) >
     .results-area .contents {
         width: 85%;
     }
-    
-    
 }
 @media screen and (max-width:968px) {
     .breadcrumb {
@@ -876,7 +819,7 @@ body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) >
         font-size: 16px;
     }
     .results-area .contents .cards .card > div > p:first-child {
-        font-size: 20px;
+        font-size: 18px;
     }
     .cta-area h2 .cta-title-img {
         width: 75%;
@@ -936,13 +879,10 @@ body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) >
         display: none;
     }
 }
+
 @media screen and (max-width:430px) {
     #serch-location-sp-btn .serch-icon{
         width: 8%;
-    }
-    .card-btn-icon {
-        left: 13px;
-        width: 18px;
     }
     .cta-area > .flex {
         background-color: #fff;
@@ -961,13 +901,12 @@ body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) >
     }
     .cta-area > .flex > div > a img {
         left: 15px;
+        width: 5%;
     }
     .cta-area > .flex > div > a::after {
         left: 90%;
     }
-    
 }
-
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     _::-webkit-full-page-media, _:future, .map .location-selection-modal ul {
         filter: drop-shadow(0px 0px 0px #949494);
