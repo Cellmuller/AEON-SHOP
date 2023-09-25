@@ -269,28 +269,3 @@ $(document).ready(function () {
     }
   );
 });
-
-// mapボタン反転
-$(document).ready(function () {
-  $("#serch-btn").hover(
-    function () {
-      // ホバー開始時
-      $(this).find(".serch-icon").attr("src", "./images/serch-icon.webp");
-    },
-    function () {
-      // ホバー終了時
-      $(this).find(".serch-icon").attr("src", "./images/serch-icon-w.webp");
-    }
-  );
-
-  $("#serch-location-btn").hover(
-    function () {
-      // ホバー開始時
-      $(this).find(".serch-icon").attr("src", "./images/location-icon-w.webp");
-    },
-    function () {
-      // ホバー終了時
-      $(this).find(".serch-icon").attr("src", "./images/location-icon.webp");
-    }
-  );
-});

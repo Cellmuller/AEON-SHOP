@@ -138,13 +138,6 @@
     text-decoration: none;
     transition: all .2s;
 }
-#serch-btn:hover{
-    background-color: #fff;
-    color: #A7217E;
-}
-#serch-btn:hover#serch-btn::after{
-    border-color: #A7217E;
-}
 #serch-location-btn{
     background-color: #ffffff;
     color: #A7217E;
@@ -158,14 +151,6 @@
     cursor: pointer;
     text-decoration: none;
     transition: all .2s;
-}
-#serch-location-btn:hover{
-    background-color: #A7217E;
-    border: 2px solid #A7217E;
-    color: #fff;
-}
-#serch-location-btn:hover#serch-location-btn::after{
-    border-color: #fff;
 }
 #serch-btn::after,
 #serch-location-btn::after{
@@ -188,6 +173,10 @@
     transform: translateY(-50%);
     left: 20px;
     width: 8%;
+}
+#serch-btn:hover,
+#serch-location-btn:hover{
+    opacity: .8;
 }
 
 .map .text-wrapper p{
@@ -396,14 +385,14 @@
     font-size: 16px;
 }
 .results-area .contents .cards .card > div:first-child > div:nth-child(2) a{
-    text-decoration: none;
     color: #A7217E;
 }
-body > main > section.results-area > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a{
-    text-decoration: underline !important;
+.results-area .contents .cards .card > div:first-child > div:nth-child(2) a{
+    text-decoration: none;
 }
-body > main > section.results-area > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div.flex > div:nth-child(2) > a{
-    text-decoration: none !important;
+.results-area .contents .cards .card > div:first-child > div:nth-child(2) a > span{
+    text-decoration: underline !important;
+    display: block;
 }
 .results-area .contents .cards .card > div:nth-child(2) .flex{
     display: block;

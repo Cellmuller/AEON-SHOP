@@ -443,6 +443,7 @@
 .results-area .contents .cards .card > div > p span{
     color: #A7217E;
     cursor: pointer;
+    text-decoration: underline;
 }
 .access-on-button{
     color: #707070 !important;
